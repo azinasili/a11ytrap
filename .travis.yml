@@ -9,7 +9,6 @@ deploy:
   provider: npm
   email: hello@azinasili.com
   api_key: $NPM_TOKEN
-  local_dir: ./dist/
   skip_cleanup: true
   tag: next
   on:
