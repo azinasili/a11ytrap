@@ -88,6 +88,7 @@ to your element's markup.
 
 
 ## Todo
+- [ ] Add tests
 - [ ] Properly handle series of radio inputs
 - [ ] Fix issue when destroying and re-enabling A11yTrap
 - [x] Enable arrow key control
