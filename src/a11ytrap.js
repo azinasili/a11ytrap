@@ -77,8 +77,8 @@ export default class A11yTrap {
   /**
    * Focus on an element.
    *
-   * @param {Number} index
    * @method
+   * @param {Number} index
    * @return A11yTrap
    */
   focusElement(index = this.activeElementIndex) {
