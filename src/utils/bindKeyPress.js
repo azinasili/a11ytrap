@@ -1,4 +1,4 @@
-import trapTabKey from './trapTabKey';
+import trapKey from './trapKey';
 
 /**
  * Keyboard navigation callback.
@@ -15,6 +15,6 @@ export default function bindKeyPress(event) {
         || event.which === 40);
 
   if ((event.which === 9 || arrowKeys) && !this.isDestroyed) {
-    trapTabKey.call(this, event);
+    trapKey.call(this, event);
   }
 }

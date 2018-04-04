@@ -1,5 +1,5 @@
 /**
- * Reset currentFocusedIndex to the activeElement.
+ * Reset state to focused element.
  *
  * @func
  */

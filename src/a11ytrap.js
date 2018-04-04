@@ -21,6 +21,7 @@ export default class A11yTrap {
    * Initialize A11yModal.
    *
    * @method
+   * @return A11yTrap
    */
   init() {
     this.isDestroyed = false;
@@ -56,6 +57,7 @@ export default class A11yTrap {
    * Remove all and events.
    *
    * @method
+   * @return A11yTrap
    */
   destroy() {
     this.isDestroyed = true;
@@ -72,7 +74,13 @@ export default class A11yTrap {
     return this;
   }
 
-  // Focus on element
+  /**
+   * Focus on an element.
+   *
+   * @param {Number} index
+   * @method
+   * @return A11yTrap
+   */
   focusElement(index = this.activeElementIndex) {
     this.elements[index].focus();
     update.call(this);
@@ -80,7 +88,12 @@ export default class A11yTrap {
     return this;
   }
 
-  // Check index of element and move to previous element
+  /**
+   * Focus on previous element.
+   *
+   * @method
+   * @return A11yTrap
+   */
   focusPrevious() {
     update.call(this);
     this.activeElementIndex -= 1;
@@ -94,7 +107,12 @@ export default class A11yTrap {
     return this;
   }
 
-  // Check index of element and move to next element
+  /**
+   * Focus on next element.
+   *
+   * @method
+   * @return A11yTrap
+   */
   focusNext() {
     update.call(this);
     this.activeElementIndex += 1;
