@@ -1,9 +1,9 @@
 /**
- * Trap focus within modal.
+ * Trap keys.
  *
  * @func
  */
-export default function trapTabKey(event) {
+export default function trapKeys(event) {
   event.preventDefault();
 
   const arrowKeys =

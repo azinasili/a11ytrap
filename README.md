@@ -1,7 +1,7 @@
 # A11yTrap
 Trap keyboard navigation within a component. A11yTrap makes it easy to add accessibility support for modals, dropdowns and other web components.
 
-[DEMO](https://codepen.io/azinasili/pen/MKGwgX?editors=0100)
+[DEMO](https://codepen.io/azinasili/pen/MVBPxL?editors=1010)
 
 ## Installation
 With [NPM](https://www.npmjs.com/package/a11ytrap):
