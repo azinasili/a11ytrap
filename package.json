@@ -1,6 +1,6 @@
 {
   "name": "a11ytrap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A proper accessible focus management for components.",
   "homepage": "https://github.com/azinasili/a11ytrap",
   "author": "Azin Asili <hello@azinasili.com> (azinasili.com)",
@@ -25,9 +25,7 @@
     "url": "https://github.com/azinasili/a11ytrap/issues"
   },
   "scripts": {
-    "build:esm": "rollup --config build/esm.js",
-    "build:umd": "rollup --config build/umd.js && rollup --config build/umd.min.js",
-    "build": "npm run build:esm && npm run build:umd",
+    "build": "rollup --config rollup.config.js",
     "test": "jest tests/**/*.test.js --coverage",
     "lint": "eslint \"{src,tests}/**/*.js\"",
     "watch": "npm-watch",
