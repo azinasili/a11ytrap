@@ -1,7 +1,36 @@
-import defaults from './defaults';
 import focusableElements from './utils/focusableElements';
 import update from './utils/update';
 import bindKeyPress from './utils/bindKeyPress';
+
+const defaults = {
+  /**
+   * Allow arrow key controls.
+   *
+   * @type {Boolean}
+   */
+  enableArrowKeys: false,
+
+  /**
+   * Start focus at specific element.
+   *
+   * @type {HTMLElement}
+   */
+  focusOnElement: null,
+
+  /**
+   * Start focus on first element.
+   *
+   * @type {Boolean}
+   */
+  focusOnFirstElement: false,
+
+  /**
+   * Start focus on last element.
+   *
+   * @type {Boolean}
+   */
+  focusOnLastElement: false,
+};
 
 export default class A11yTrap {
   constructor(target, options = {}) {
