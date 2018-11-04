@@ -1,6 +1,7 @@
 import { eslint } from 'rollup-plugin-eslint';
 import babel from 'rollup-plugin-babel';
 import uglify from 'rollup-plugin-uglify-es';
+import license from 'rollup-plugin-license';
 import pkg from './package.json';
 
 const banner = `/*!
@@ -33,5 +34,8 @@ export default {
     }),
     babel(),
     uglify(),
+    license({
+      banner,
+    }),
   ],
 };
