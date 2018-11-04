@@ -1,11 +1,15 @@
 {
+  "comments": false,
   "presets": [
-    ["env", { "modules": false }]
+    "@babel/preset-env"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-object-assign"
   ],
   "env": {
     "test": {
       "presets": [
-        ["env"]
+        ["@babel/preset-env"]
       ]
     }
   }

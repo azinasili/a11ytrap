@@ -1,6 +1,7 @@
-import eslint from 'rollup-plugin-eslint';
+import { eslint } from 'rollup-plugin-eslint';
 import babel from 'rollup-plugin-babel';
-import uglify from 'rollup-plugin-uglify';
+import uglify from 'rollup-plugin-uglify-es';
+import license from 'rollup-plugin-license';
 import pkg from './package.json';
 
 const banner = `/*!
@@ -13,8 +14,17 @@ const banner = `/*!
 export default {
   input: 'src/a11ytrap.js',
   output: [
-    { banner, file: pkg.main, format: 'umd', name: 'A11yTrap' },
-    { banner, file: pkg.module, format: 'es' },
+    {
+      banner,
+      file: pkg.main,
+      format: 'umd',
+      name: 'A11yTrap',
+    },
+    {
+      banner,
+      file: pkg.module,
+      format: 'es',
+    },
   ],
   plugins: [
     eslint({
@@ -22,20 +32,10 @@ export default {
       throwOnError: true,
       throwOnWarning: true,
     }),
-    babel({
-      plugins: [
-        'external-helpers',
-        'transform-object-assign',
-      ],
-    }),
-    uglify({
-      output: {
-        comments: '/^!/',
-      },
-      compress: {
-        drop_console: true,
-        pure_funcs: 'warn',
-      },
+    babel(),
+    uglify(),
+    license({
+      banner,
     }),
   ],
 };
