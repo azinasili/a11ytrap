@@ -7,8 +7,7 @@ import trapKey from './trapKey';
  * @param {Event} event - Get current target of event
  */
 export default function bindKeyPress(event) {
-  const arrowKeys =
-    this.settings.enableArrowKeys
+  const arrowKeys = this.settings.enableArrowKeys
     && (event.which === 37
         || event.which === 38
         || event.which === 39

@@ -6,8 +6,7 @@
 export default function trapKeys(event) {
   event.preventDefault();
 
-  const arrowKeys =
-    this.settings.enableArrowKeys
+  const arrowKeys = this.settings.enableArrowKeys
     && (event.which === 37 || event.which === 38);
 
   if (event.shiftKey || arrowKeys) {

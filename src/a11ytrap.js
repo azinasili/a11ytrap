@@ -34,10 +34,9 @@ const defaults = {
 
 export default class A11yTrap {
   constructor(target, options = {}) {
-    const container =
-      (target === document || target === document.body)
-        ? target
-        : document.querySelector(target);
+    const container = (target === document || target === document.body)
+      ? target
+      : document.querySelector(target);
 
     this.settings = Object.assign({}, defaults, options);
     this.elements = [...container.querySelectorAll(focusableElements)];
