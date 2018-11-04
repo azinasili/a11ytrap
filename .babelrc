@@ -1,8 +1,7 @@
 {
   "comments": false,
   "presets": [
-    "@babel/preset-env",
-    "minify"
+    "@babel/preset-env"
   ],
   "plugins": [
     "@babel/plugin-transform-object-assign"
